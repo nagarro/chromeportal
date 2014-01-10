@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome Portal",
+  "version": "0.1.0",
+  "description": "Chrome extension to run Nagarro portal features",
+  "permissions": [
+    "http://portal/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://portal/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["chromePortalFix.js"]
+}
